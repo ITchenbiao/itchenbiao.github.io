@@ -5,6 +5,9 @@
     <title>Andy's Blog</title>
 </head>
 <body>
+<!---->
+<h1>this is my Blog.</h1>
+
 <script>
     function browserRedirect() {
         var sUserAgent = navigator.userAgent.toLowerCase();
@@ -17,12 +20,12 @@
         var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
         var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
         if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-            window.location.href="http://blog.csdn.net/lmj623565791";
+            window.location.href="http://www.baidu.com";
         } else {
-            window.location.href="http://m.blog.csdn.net/blog/index?username=iliujie";
+            window.location.href="http://www.m.baidu.com";
         }
     }
-    browserRedirect();
+    // browserRedirect();
 </script>
 
 </body>
