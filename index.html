@@ -1,185 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 	<head>
-		<title>Andy's Website</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/wow/animate.css">
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		<link rel="Bookmark" href="/favicon.ico" />
-		<link href="https://github.com/ITchenbiao/itchenbiao.github.io/blob/master/favicon.ico" rel="icon" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Above &amp; Beneath: Featured Content Layout Effect | Demo 1</title>
 
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Montserrat:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
+		<script>document.documentElement.className = 'js';</script>
 	</head>
-	
 	<body>
-		<div class="page-wrap" id="root">
-			
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="container">
-					<div class="header__inner">
-						<div class="header__logo"><a href="index.html">SuperAndy</a></div>
-						<div class="header__menu">
+		<svg class="hidden">
+			<defs>
+				<symbol id="icon-arrow" viewBox="0 0 24 24">
+					<title>arrow</title>
+					<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+				</symbol>
+				<symbol id="icon-drop" viewBox="0 0 24 24">
+					<title>drop</title>
+					<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+				</symbol>
+				<symbol id="icon-grid" viewBox="0 0 100 100">
+					<title>grid</title>
+					<rect x="8.4" y="8.9" width="20.1" height="20.1"/>
+					<rect x="40" y="8.9" width="20.1" height="20.1"/>
+					<rect x="71.6" y="8.9" width="20.1" height="20.1"/>
+					<rect x="8.3" y="40" width="20.1" height="20.1"/>
+					<rect x="39.9" y="40" width="20.1" height="20.1"/>
+					<rect x="71.6" y="40" width="20.1" height="20.1"/>
+					<rect x="8.3" y="71" width="20.1" height="20.1"/>
+					<rect x="39.9" y="71" width="20.1" height="20.1"/>
+					<rect x="71.6" y="71" width="20.1" height="20.1"/>
+				</symbol>
+				<symbol id="icon-sound-on" viewBox="0 0 100 100">
+					<title>sound on</title>
+					<path d="M57.9,13c-6.6,0-13.1,1.8-18.8,5.1c-5.1,3-9.3,7.1-12.5,12.1H12.5c-5.7,0-10.4,4.7-10.4,10.4v18.9
+						c0,5.7,4.7,10.4,10.4,10.4h14.1c3.1,4.9,7.4,9.1,12.5,12.1c5.7,3.3,12.1,5.1,18.8,5.1c1.5,0,2.7-1.2,2.7-2.7V15.7
+						C60.6,14.2,59.4,13,57.9,13z M25.5,64.5h-13c-2.8,0-5.1-2.3-5.1-5.1V40.6c0-2.8,2.3-5.1,5.1-5.1h13C25.5,35.5,25.5,64.5,25.5,64.5
+						z M55.2,81.6c-10-0.8-19.1-6.5-24.4-15.1V33.6c5.3-8.6,14.4-14.3,24.4-15.1V81.6z"/>
+					<path d="M71,29.4c-1.2-0.8-2.9-0.6-3.7,0.7c-0.8,1.2-0.6,2.9,0.7,3.7c5.3,3.7,8.5,9.8,8.5,16.3S73.3,62.6,68,66.3
+						c-1.2,0.8-1.5,2.5-0.7,3.7c0.5,0.8,1.3,1.1,2.2,1.1c0.5,0,1.1-0.2,1.5-0.5C77.8,66,81.8,58.3,81.8,50S77.8,34.1,71,29.4z"/>
+					<path d="M81.3,18.3c-1.2-0.8-2.9-0.6-3.7,0.7c-0.8,1.2-0.6,2.9,0.7,3.7c8.9,6.2,14.3,16.4,14.3,27.3
+						s-5.3,21.1-14.3,27.3c-1.2,0.8-1.5,2.5-0.7,3.7c0.5,0.8,1.3,1.1,2.2,1.1c0.5,0,1.1-0.2,1.5-0.5C91.7,74.5,97.9,62.6,97.9,50
+						S91.7,25.5,81.3,18.3z"/>
+				</symbol>
+				<symbol id="icon-sound-off" viewBox="0 0 100 100">
+					<title>sound off</title>
+					<path d="M57.9,13c-6.6,0-13.1,1.8-18.8,5.1c-5.1,3-9.3,7.1-12.5,12.1H12.5c-5.7,0-10.4,4.7-10.4,10.4v18.9
+						c0,5.7,4.7,10.4,10.4,10.4h14.1c3.1,4.9,7.4,9.1,12.5,12.1c5.7,3.3,12.1,5.1,18.8,5.1c1.5,0,2.7-1.2,2.7-2.7V15.7
+						C60.6,14.2,59.4,13,57.9,13z M25.5,64.5h-13c-2.8,0-5.1-2.3-5.1-5.1V40.6c0-2.8,2.3-5.1,5.1-5.1h13C25.5,35.5,25.5,64.5,25.5,64.5z
+						M55.2,81.6c-10-0.8-19.1-6.5-24.4-15.1V33.6c5.3-8.6,14.4-14.3,24.4-15.1V81.6z"/>
+					<g>
+						<path d="M68.4,66.4c-0.7,0-1.4-0.3-1.9-0.8c-1-1-1-2.7,0-3.8l27.6-27.6c1-1,2.7-1,3.8,0c1,1,1,2.7,0,3.8L70.3,65.7
+						C69.8,66.2,69.1,66.4,68.4,66.4z"/>
+						<path d="M96,66.4c-0.7,0-1.4-0.3-1.9-0.8L66.6,38.1c-1-1-1-2.7,0-3.8c1-1,2.7-1,3.8,0l27.6,27.6c1,1,1,2.7,0,3.8
+						C97.4,66.2,96.7,66.4,96,66.4z"/>
+					</g>
+				</symbol>
+			</defs>
+		</svg>
+		<main class="landing-layout">
+			<!-- Landing wrap with sections -->
+			<div class="landing-wrap">
+				<section class="landing landing--above" style="background-image: url(img/2.jpg);"></section>
+				<section class="landing landing--beneath" style="background-image: url(img/1.jpg);">
+					<canvas id="bubbles"></canvas>
+				</section>
+			</div><!-- /landing-wrap -->
+			<!-- Landing header with title -->
+			<header class="landing-header">
+				<h1 class="landing-header__title" aria-label="Seaweed">
+					<span>S</span><span>u</span><span>p</span><span>e</span><span>r</span><span>a</span><span>n</span><span>d</span><span>y</span>
+				</h1>
+				<p class="landing-header__tagline">WELCOME</p>
+			</header><!-- /landing-header -->
+			<!-- Trigger button for layout change -->
+			<button class="button button--trigger" aria-label="View more">
+				<svg class="icon icon--grid icon--shown"><use xlink:href="#icon-grid"></use></svg>
+				<svg class="icon icon--arrow-up icon--hidden"><use xlink:href="#icon-arrow"></use></svg>
+			</button>
+			<!-- Sound on/off button -->
+			<button class="button button--sound" aria-label="Toggle sound">
+				<svg class="icon icon--sound-on icon--shown"><use xlink:href="#icon-sound-on"></use></svg>
+				<svg class="icon icon--sound-off icon--hidden"><use xlink:href="#icon-sound-off"></use></svg>
+			</button>
+			<!-- Featured content that gets shown after the layout opens -->
+			<section class="featured-content">
+				<ul class="featured-list">
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/me.svg" alt="Seaweed 1">
+							<h3 class="featured-list__title">SuperAndy</h3>
+						</a>
+					</li>
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/musiccloud.svg" alt="Seaweed 2">
+							<h3 class="featured-list__title">Cloud Music</h3>
+						</a>
+					</li>
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/news.svg" alt="Seaweed 3">
+							<h3 class="featured-list__title">Blog</h3>
+						</a>
+					</li>
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/QQ.svg" alt="Seaweed 4">
+							<h3 class="featured-list__title">QQ</h3>
+						</a>
+					</li>
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/wechats.svg" alt="Seaweed 5">
+							<h3 class="featured-list__title">Wechat</h3>
+						</a>
+					</li>
+					<li class="featured-list__item">
+						<a href="#" class="featured-list__link">
+							<img class="featured-list__img" src="img/icons/github.svg" alt="Seaweed 6">
+							<h3 class="featured-list__title">Github</h3>
+						</a>
+					</li>
+				</ul>
+			</section><!-- /featured-content -->
 
-							<!-- onepage-nav -->
-							<nav class="onepage-nav">
-								
-								<!-- onepage-menu -->
-								<ul class="onepage-menu">
-									<li class="current-menu-item">
-										<a href="#id-1">Home</a>
-									</li>
-									<li>
-										<a href="#id-2">Welcome</a>
-									</li>
-									<li>
-										<a href="#id-3">To</a>
-									</li>
-									<li>
-										<a href="#id-4">My</a>
-									</li>
-									<li>
-										<a href="#id-5">Personal</a>
-									</li>
-									<li>
-										<a href="#id-6">Website</a>
-									</li>
-								</ul><!-- onepage-menu -->
-								
-								<div class="navbar-toggle"><span></span><span></span><span></span></div>
-							</nav><!-- End / onepage-nav -->
-							
-						</div>
-					</div>
-				</div>
-			</header><!-- End / header -->
-			
-			<!-- Content-->
-			<div class="awe-content">
-				
-				<!-- hero -->
-				<section class="hero awe-text-center" id="id-1">
-					<div class="awe-overlay"></div>
-					<div class="hero__wrapper">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
-									<h1 class="hero__title"><h1 class="hero__title">Welcome to my personal website.</h1>
-									</h1>
-									<p class="hero__text">I want to tell you that I am a creative web developer.</p>
-									<a class="a-btn btn-first" href="#">Cloud Music</a><a class="a-btn btn-second" href="#">My Blog</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- smoky -->
-					<div class="smoky" id="smoky-bg">
-						<canvas>Your browser does not support HTML5 canvas.</canvas>
-					</div><!-- End / smoky -->
-
-				</section><!-- End / hero -->
-
-				
+			<div class="loader">
+				<svg class="loader__img" viewBox="0 0 100 100" width="100px" height="100px">
+					<circle class="loader__circle" cx="22.8" cy="77.6" r="16.5"/>
+					<circle class="loader__circle" cx="52.2" cy="82.9" r="6.5"/>
+					<circle class="loader__circle" cx="79.8" cy="69.8" r="13.1"/>
+				</svg>
 			</div>
-			<!-- End / Content-->
-			
-			<!-- footer -->
-			<div id="footer" class="full_width clearfix">
-				<div class="post_width  footer_wrapper">
-					<ul class="grv_articles grv_has_image">
-						<li class="grv_article grv_has_image">
-							<ul><div>
-								<h3 class="widget-title">Popular search</h3>
-								<div class="tagcloud"><a href="http://netsmell.com/tag/alphago" class="tag-cloud-link tag-link-328 tag-link-position-1" style="font-size: 9.2962962962963pt;" aria-label="AlphaGo (14个项目)">AlphaGo</a>
-								<a href="http://netsmell.com/tag/iphone" class="tag-cloud-link tag-link-305 tag-link-position-2" style="font-size: 13.314814814815pt;" aria-label="iphone (30个项目)">iphone</a>
-								<a href="http://netsmell.com/tag/iphone-x" class="tag-cloud-link tag-link-1495 tag-link-position-3" style="font-size: 11.888888888889pt;" aria-label="iPhone X (23个项目)">iPhone X</a>
-								<a href="http://netsmell.com/tag/linux" class="tag-cloud-link tag-link-15 tag-link-position-4" style="font-size: 13.185185185185pt;" aria-label="linux (29个项目)">linux</a>
-								<a href="http://netsmell.com/tag/miui" class="tag-cloud-link tag-link-311 tag-link-position-5" style="font-size: 10.592592592593pt;" aria-label="miui (18个项目)">miui</a>
-								<a href="http://netsmell.com/tag/ofo" class="tag-cloud-link tag-link-1131 tag-link-position-6" style="font-size: 10.333333333333pt;" aria-label="ofo (17个项目)">ofo</a>
-								<a href="http://netsmell.com/tag/vr" class="tag-cloud-link tag-link-294 tag-link-position-7" style="font-size: 13.314814814815pt;" aria-label="vr (30个项目)">vr</a>
-								<a href="http://netsmell.com/tag/%e4%b8%89%e6%98%9f" class="tag-cloud-link tag-link-707 tag-link-position-8" style="font-size: 8.3888888888889pt;" aria-label="三星 (12个项目)">三星</a>
-								<a href="http://netsmell.com/tag/%e4%ba%ac%e4%b8%9c" class="tag-cloud-link tag-link-392 tag-link-position-9" style="font-size: 10.592592592593pt;" aria-label="京东 (18个项目)">京东</a>
-								<a href="http://netsmell.com/tag/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" class="tag-cloud-link tag-link-93 tag-link-position-10" style="font-size: 11.37037037037pt;" aria-label="人工智能 (21个项目)">人工智能</a>
-								<a href="http://netsmell.com/tag/%e5%85%a8%e9%9d%a2%e5%b1%8f" class="tag-cloud-link tag-link-837 tag-link-position-11" style="font-size: 9.9444444444444pt;" aria-label="全面屏 (16个项目)">全面屏</a>
-								<a href="http://netsmell.com/tag/%e5%85%b1%e4%ba%ab%e5%8d%95%e8%bd%a6" class="tag-cloud-link tag-link-1029 tag-link-position-12" style="font-size: 15.518518518519pt;" aria-label="共享单车 (45个项目)">共享单车</a>
-								<a href="http://netsmell.com/tag/%e5%8a%a0%e7%8f%ad" class="tag-cloud-link tag-link-157 tag-link-position-13" style="font-size: 10.851851851852pt;" aria-label="加班 (19个项目)">加班</a>
-								<a href="http://netsmell.com/tag/%e5%8d%8e%e4%b8%ba" class="tag-cloud-link tag-link-426 tag-link-position-14" style="font-size: 15.777777777778pt;" aria-label="华为 (47个项目)">华为</a>
-								<a href="http://netsmell.com/tag/%e5%8d%b0%e5%ba%a6" class="tag-cloud-link tag-link-1122 tag-link-position-15" style="font-size: 8.3888888888889pt;" aria-label="印度 (12个项目)">印度</a>
-								<a href="http://netsmell.com/tag/%e5%9f%9f%e5%90%8d" class="tag-cloud-link tag-link-37 tag-link-position-16" style="font-size: 8pt;" aria-label="域名 (11个项目)">域名</a>
-								<a href="http://netsmell.com/tag/%e5%ae%89%e5%8d%93" class="tag-cloud-link tag-link-419 tag-link-position-17" style="font-size: 10.592592592593pt;" aria-label="安卓 (18个项目)">安卓</a>
-								<a href="http://netsmell.com/tag/%e5%b0%8f%e7%b1%b3" class="tag-cloud-link tag-link-69 tag-link-position-18" style="font-size: 22pt;" aria-label="小米 (142个项目)">小米</a>
-								<a href="http://netsmell.com/tag/%e5%b0%8f%e7%b1%b3mix" class="tag-cloud-link tag-link-833 tag-link-position-19" style="font-size: 9.5555555555556pt;" aria-label="小米mix (15个项目)">小米mix</a>
-								<a href="http://netsmell.com/tag/%e5%b0%8f%e7%b1%b3mix2" class="tag-cloud-link tag-link-925 tag-link-position-20" style="font-size: 11.111111111111pt;" aria-label="小米mix2 (20个项目)">小米mix2</a>
-								<a href="http://netsmell.com/tag/%e5%b0%8f%e7%b1%b3%e6%9c%89%e5%93%81" class="tag-cloud-link tag-link-1467 tag-link-position-21" style="font-size: 9.2962962962963pt;" aria-label="小米有品 (14个项目)">小米有品</a>
-								<a href="http://netsmell.com/tag/%e5%bc%80%e6%ba%90" class="tag-cloud-link tag-link-51 tag-link-position-22" style="font-size: 8.9074074074074pt;" aria-label="开源 (13个项目)">开源</a>
-								<a href="http://netsmell.com/tag/%e5%be%ae%e4%bf%a1" class="tag-cloud-link tag-link-60 tag-link-position-23" style="font-size: 13.833333333333pt;" aria-label="微信 (33个项目)">微信</a>
-								<a href="http://netsmell.com/tag/%e5%be%ae%e5%8d%9a" class="tag-cloud-link tag-link-59 tag-link-position-24" style="font-size: 9.9444444444444pt;" aria-label="微博 (16个项目)">微博</a>
-								<a href="http://netsmell.com/tag/%e5%be%ae%e8%bd%af" class="tag-cloud-link tag-link-75 tag-link-position-25" style="font-size: 12.148148148148pt;" aria-label="微软 (24个项目)">微软</a>
-								<a href="http://netsmell.com/tag/%e5%bf%83%e5%be%97" class="tag-cloud-link tag-link-194 tag-link-position-26" style="font-size: 8.3888888888889pt;" aria-label="心得 (12个项目)">心得</a>
-								<a href="http://netsmell.com/tag/%e6%89%8b%e6%9c%ba" class="tag-cloud-link tag-link-412 tag-link-position-27" style="font-size: 17.203703703704pt;" aria-label="手机 (60个项目)">手机</a>
-								<a href="http://netsmell.com/tag/%e6%89%93%e8%b5%8f" class="tag-cloud-link tag-link-1166 tag-link-position-28" style="font-size: 8.3888888888889pt;" aria-label="打赏 (12个项目)">打赏</a>
-								<a href="http://netsmell.com/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag-cloud-link tag-link-110 tag-link-position-29" style="font-size: 8pt;" aria-label="机器人 (11个项目)">机器人</a>
-								<a href="http://netsmell.com/tag/%e6%9d%83%e5%8a%9b%e7%9a%84%e6%b8%b8%e6%88%8f" class="tag-cloud-link tag-link-319 tag-link-position-30" style="font-size: 9.5555555555556pt;" aria-label="权力的游戏 (15个项目)">权力的游戏</a>
-								<a href="http://netsmell.com/tag/%e6%af%94%e7%89%b9%e5%b8%81" class="tag-cloud-link tag-link-229 tag-link-position-31" style="font-size: 12.148148148148pt;" aria-label="比特币 (24个项目)">比特币</a>
-								<a href="http://netsmell.com/tag/%e6%b8%b8%e6%88%8f" class="tag-cloud-link tag-link-34 tag-link-position-32" style="font-size: 8.9074074074074pt;" aria-label="游戏 (13个项目)">游戏</a>
-								<a href="http://netsmell.com/tag/%e7%89%b9%e6%9c%97%e6%99%ae" class="tag-cloud-link tag-link-946 tag-link-position-33" style="font-size: 10.333333333333pt;" aria-label="特朗普 (17个项目)">特朗普</a>
-								<a href="http://netsmell.com/tag/%e7%8e%8b%e8%80%85%e8%8d%a3%e8%80%80" class="tag-cloud-link tag-link-1190 tag-link-position-34" style="font-size: 9.9444444444444pt;" aria-label="王者荣耀 (16个项目)">王者荣耀</a>
-								<a href="http://netsmell.com/tag/%e7%94%b5%e5%bd%b1" class="tag-cloud-link tag-link-509 tag-link-position-35" style="font-size: 12.796296296296pt;" aria-label="电影 (27个项目)">电影</a>
-								<a href="http://netsmell.com/tag/%e7%99%be%e5%ba%a6" class="tag-cloud-link tag-link-53 tag-link-position-36" style="font-size: 15.518518518519pt;" aria-label="百度 (45个项目)">百度</a>
-								<a href="http://netsmell.com/tag/%e7%a7%91%e6%99%ae" class="tag-cloud-link tag-link-1299 tag-link-position-37" style="font-size: 13.185185185185pt;" aria-label="科普 (29个项目)">科普</a>
-								<a href="http://netsmell.com/tag/%e7%bb%8f%e9%aa%8c" class="tag-cloud-link tag-link-101 tag-link-position-38" style="font-size: 9.2962962962963pt;" aria-label="经验 (14个项目)">经验</a>
-								<a href="http://netsmell.com/tag/%e8%8b%b9%e6%9e%9c" class="tag-cloud-link tag-link-251 tag-link-position-39" style="font-size: 16.944444444444pt;" aria-label="苹果 (58个项目)">苹果</a>
-								<a href="http://netsmell.com/tag/%e8%99%9a%e6%8b%9f%e7%8e%b0%e5%ae%9e" class="tag-cloud-link tag-link-295 tag-link-position-40" style="font-size: 10.592592592593pt;" aria-label="虚拟现实 (18个项目)">虚拟现实</a>
-								<a href="http://netsmell.com/tag/%e8%a7%86%e9%a2%91" class="tag-cloud-link tag-link-356 tag-link-position-41" style="font-size: 11.62962962963pt;" aria-label="视频 (22个项目)">视频</a>
-								<a href="http://netsmell.com/tag/%e8%b0%b7%e6%ad%8c" class="tag-cloud-link tag-link-108 tag-link-position-42" style="font-size: 18.111111111111pt;" aria-label="谷歌 (72个项目)">谷歌</a>
-								<a href="http://netsmell.com/tag/%e9%9b%b7%e5%86%9b" class="tag-cloud-link tag-link-68 tag-link-position-43" style="font-size: 9.5555555555556pt;" aria-label="雷军 (15个项目)">雷军</a>
-								<a href="http://netsmell.com/tag/%e9%a9%ac%e4%ba%91" class="tag-cloud-link tag-link-113 tag-link-position-44" style="font-size: 9.2962962962963pt;" aria-label="马云 (14个项目)">马云</a>
-								<a href="http://netsmell.com/tag/%e9%bb%91%e5%ae%a2" class="tag-cloud-link tag-link-165 tag-link-position-45" style="font-size: 12.925925925926pt;" aria-label="黑客 (28个项目)">黑客</a></div>
-							</div></ul>
-						</li>
-					</ul>
-
-
-					<center> <br><a href="http://www.miitbeian.gov.cn" style="color: #fff;">Popular search form netsmell.com</a> <br><br><br><br></center>
-
-				</div>
-			</div>
-			<!-- End / footer -->
-			
-		</div>
-		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/_jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-		<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.countTo/jquery.countTo.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/tabs/awe-tabs.js"></script>
-		<script type="text/javascript" src="assets/vendors/wow/wow.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.appear/jquery.appear.js"></script>
-		<script type="text/javascript" src="assets/vendors/waterpipe/waterpipe.js"></script>
-		<!-- App-->
-		<script type="text/javascript" src="assets/js/main.js"></script>
+		</main>
+		<script src="js/howler.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
