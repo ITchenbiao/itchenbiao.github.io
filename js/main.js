@@ -142,9 +142,9 @@
 		audio = {
 			sounds : {},
 			sources : [{
-				lake : 'http://itchenbiao.oss-cn-beijing.aliyuncs.com/LoveyoulikeIdo.mp3',
-				splash : 'http://itchenbiao.oss-cn-beijing.aliyuncs.com/LoveyoulikeIdo.mp3',
-				underwater : 'http://itchenbiao.oss-cn-beijing.aliyuncs.com/LoveyoulikeIdo.mp3'
+				lake : 'sounds/LoveyoulikeIdo.mp3',
+				splash : 'sounds/LoveyoulikeIdo.mp3',
+				underwater : 'sounds/LoveyoulikeIdo.mp3'
 			}],
 			load : function(callback) {
 				this.totalFiles = Object.size(this.sources[0]);
