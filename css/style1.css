@@ -655,3 +655,45 @@ a:focus {
 		font-size: 1em;
 	}
 }
+/* position rel*/
+.wrap_posrel{
+	position: relative;
+}
+/* pc ------- 显示 微信 qq 样式 */
+/*qq hover style*/
+.featured_qqPop{
+	position: absolute;
+	background: url(../img/icons/qqfriends.jpg) no-repeat;
+	background-size: 128px 148px;
+	height: 148px;
+	width: 128px;
+	top: -100px;
+	left: 140px;
+	display: none;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+
+/*wechat hover style*/
+.featured_wechatPop{
+	position: absolute;
+	background: url(../img/icons/wechartfriends.jpg) no-repeat;
+	background-size: 128px 148px;
+	height: 148px;
+	width: 128px;
+	top: -100px;
+	left: 140px;
+	display: none;
+	/*border: 1px solid #000;*/
+	/*border-radius: 4px;*/
+}
+
+@media screen and (min-width: 44em) {
+	.wechat_wrap:hover .featured_wechatPop {
+		display: block;
+	}
+	.qq_wrap:hover .featured_qqPop{
+		display: block;
+	}
+}
+

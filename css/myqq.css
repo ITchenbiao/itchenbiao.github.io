@@ -1,0 +1,26 @@
+body{
+    background-color: #fff !important;
+}
+.toReturn{
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    background-color: #1E95CD;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+.myqq_cont{
+    background: url("../img/icons/qqfriends.jpg") no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-size: 128px 148px;
+    height: 148px;
+    width: 128px;
+    margin-top: -74px;
+    margin-left: -64px;
+}

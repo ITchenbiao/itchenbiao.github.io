@@ -112,7 +112,7 @@
 				};
 			},
 			drawCircle : function(x, y, radius) {
-				this.ctx.fillStyle = "red";
+				this.ctx.fillStyle = "white";
 				this.ctx.beginPath();
 				this.ctx.arc(x,y,radius, 0, Math.PI*2, false);
 				this.ctx.closePath();
@@ -267,5 +267,69 @@
 	}
 
 	init();
+
+    // 事件委托
+    var child = document.getElementsByClassName("featured-list__item");
+    for (var i = 0; i < child.length; i++) {
+        var lictive = child[i];
+        lictive.index = i;//给每个className为child的元素添加index属性;
+        lictive.onclick = function () {
+            var that=this;
+            // console.log(that);
+            if(that.index == 0){
+                console.log('me')
+			}else if(that.index==1){
+                window.open("http://music.tangxintao.cn/#/music");
+			}else if(that.index==2){
+                console.log('bolg')
+                // window.open("http://music.tangxintao.cn/");
+			}else if(that.index==3){
+				if(document.body.clientWidth <= 414){
+                    window.location.href = "myqq.html";
+				}
+                // window.open("http://music.tangxintao.cn/");
+			}else if(that.index==4){
+                if(document.body.clientWidth <= 414){
+                    window.location.href = "mywechat.html";
+                }
+                // window.open("http://music.tangxintao.cn/");
+			}else if(that.index==5){
+                window.open("https://github.com/ITchenbiao");
+			}
+
+        }
+    }
+
+//    禁止横屏
+
+    function orient() {
+
+        //alert('gete');
+
+        if (window.orientation == 0 || window.orientation == 180) {
+
+            $("body").attr("class", "portrait");
+
+            orientation = 'portrait';
+
+            return false;
+
+        }
+
+        else if (window.orientation == 90 || window.orientation == -90) {
+
+            $("body").attr("class", "landscape");
+
+            orientation = 'landscape';
+
+
+
+            return false;
+
+        }
+
+    }
+
+
 
 })(window);
