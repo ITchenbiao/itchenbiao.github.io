@@ -205,8 +205,8 @@
 				if(loadedMediaItems === 2) {
 					mainContainer.classList.add('landing-layout--loaded');
 					// Play lake sound.
-					audio.loop('lake');
-					audio.play('lake');
+					// audio.loop('lake');
+					// audio.play('lake');
 					// Init the bubbles canvas animation.
 					bubbles.init();
 					// Init/Bind Events
@@ -217,7 +217,7 @@
 		// Preload images..
 		imagesLoaded(landingWrapper, { background: true }, checkloaded);
 		// Preload sounds..
-		audio.load(checkloaded);
+		// audio.load(checkloaded);
 	}
 
 	function initEvents() {
@@ -228,11 +228,11 @@
 		// Mute sounds.
 		soundCtrl.addEventListener('click', function() {
 			if( !isAudioOn ) {
-				audio.toggleMuteAll(false);
+				// audio.toggleMuteAll(false);
 				soundCtrl.classList.remove('button--sound-off');
 			}
 			else {
-				audio.toggleMuteAll(true);
+				// audio.toggleMuteAll(true);
 				soundCtrl.classList.add('button--sound-off');
 			}
 			isAudioOn = !isAudioOn;
@@ -248,21 +248,21 @@
 			// Stop the bubbles canvas animation.
 			bubbles.stop();
 			// Sounds..
-			audio.fadeOut('underwater');
-			audio.play('splash', 700);
-			audio.loop('lake');
-			audio.fadeIn('lake', 700);
+			// audio.fadeOut('underwater');
+			// audio.play('splash', 700);
+			// audio.loop('lake');
+			// audio.fadeIn('lake', 700);
 		}
 		else {	// open it.
 			// Start the bubbles canvas animation.
 			bubbles.start();
 			// Sounds..
-			audio.fadeOut('lake');
-			audio.volume('splash', 0.5);
-			audio.play('splash', 700);
-			audio.loop('underwater');
-			audio.play('underwater', 700);
-			audio.fadeIn('underwater');
+			// audio.fadeOut('lake');
+			// audio.volume('splash', 0.5);
+			// audio.play('splash', 700);
+			// audio.loop('underwater');
+			// audio.play('underwater', 700);
+			// audio.fadeIn('underwater');
 		}
 	}
 
